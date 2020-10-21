@@ -1,0 +1,81 @@
+body {
+	background: #FF1493;
+}
+h1 {
+	color: white;
+	text-align: center;
+	background-color:#0000FF;
+}
+p {
+	color: white;
+	text-align: justify;
+	padding-left: 20pt;
+	padding-right: 100pt;
+}
+label {
+	color: white;
+}
+input{
+	color: #0000FF;
+	font-size: 12pt;
+}
+button {
+	background: #0000FF;
+	border: 20pt 40pt;
+	border-top-color: white;
+	border-right-color: white;
+	border-left-color: white;
+	border-bottom-color: white;
+	border-radius: 5pt;
+	font-size: Arial 60pt;
+	color: white;
+	position: center;
+}
+aside{
+	padding-left:380pt; 
+	padding-right: 300pt;
+}
+img{
+	width:100px;
+	height: 100px;
+	padding-left: 150pt;
+	padding-top: 0pt;
+}
+table{
+	width: 100%;
+	border-style: solid;		
+	border-color: white;
+}
+th {
+	color: white;
+	position: center;
+	background: #0000FF;
+	border-style: solid;
+	border-color: white;
+	padding-right: 50pt;
+}
+td {
+	color: white;
+	border-style: solid;		
+	border-color: white;
+	padding-right: 50pt;
+	padding-left: 50pt;
+}
+#seuIMC {
+	font-color: white;
+	background-color: blue;
+}
+footer {
+	bottom: 0;
+	left: 0;
+	position: fixed; 
+    width: 100%;
+    margin-top: 40pt;
+	background-color: blue;
+	color: white;
+}
+#p2 {
+	font-color: white;
+	text-align: center;
+	font-size: 9pt;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Seu IMC</title>
+  	<header>
+  		<link rel="stylesheet" type="text/css" href="estilos.css">	
+  	</header>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () { 
+      		$("#CalculaIMC").click(function () {
+        		var pes = parseFloat($("#peso").val());
+				var alt = parseFloat($("#altura").val());
+				var imc = pes/(alt*alt);
+				
+				if (imc < 18.5) {
+					$("#seuIMC").html("Você está Abaixo do Peso. Seu resultado foi: " +imc.toFixed(2));
+				} else if (imc >= 18.5 && imc < 25){
+					$("#seuIMC").html("Você está no Peso Ideal. Seu resultado foi: " +imc.toFixed(2));
+				} else if (imc >= 25 && imc < 30){
+					$("#seuIMC").html("Você está com Sobrepeso. Seu resultado foi: " +imc.toFixed(2));
+				} else if(imc >= 30 && imc < 35) {
+					$("#seuIMC").html("Você está com Obesidade Grau 1. Seu resultado foi: " +imc.toFixed(2));
+				}else if(imc >= 35 && imc < 40) {
+					$("#seuIMC").html("Você está com Obesidade Grau 2. Seu resultado foi: " +imc.toFixed(2));
+				}else if (imc >= 40) {
+					$("#seuIMC").html("Você está com Obesidade Grau 3. Seu resultado foi: " +imc.toFixed(2));
+				}
+																					 
+			});
+        });
+        
+        </script>
+    </head>
+    <body>
+       <h1>Descubra seu IMC</h1>
+       <p>O Índice de Massa corpórea <strong> (IMC) </strong>é uma medida internacional para calcular se uma pessoa está no peso ideal. Tal índice foi desenvolvido pelo polímata Lambert Quételet no fim do século XIX. Trata-se de um método  fácil e rápido para a avaliação do nível de gordura de cada pessoa, ou seja, é um preditor internacional de obesidade adotada pela Organização Mundial da Saúde (OMS).</p>
+       <p><strong>Digite seus dados abaixo e descubra o seu IMC.</strong></p>
+     <form>
+         <div>
+            <label>Seu Peso: </label>
+        	<input type="text" id="peso" placeholder="Exemplo 50"/></br> 
+        </div></br>
+    	<div>
+        	<label>Sua Altura: </label>
+        	<input type="text" id="altura" value="" placeholder="Exemplo 1.60"/></br>
+		</div></br>
+       </form>
+       <button id="CalculaIMC"><strong>Resultado</strong></button>
+       <p id="seuIMC"></p>
+
+       <aside>
+       	<img src="peso.png" alt="Imagem Compara Peso">
+       	<!--Icone free disponível em: https://www.flaticon.com/br/icone-gratis/perder-peso_1616452?term=perder%20peso&page=1&position=46-->
+  		<table>
+       		<tr>
+       			<th>IMC</th>
+       			<th>Condição</th>
+       		</tr>
+       		<tr>
+       			<td> Menos que 18.5 </td><td>Baixo Peso</td>
+       		</tr>
+       		<tr>
+       			<td>Entre 18.5 e 24.9</td><td>Peso Ideal</td>
+       		</tr>
+       		<tr>
+       			<td>Entre 25 e 29.9</td><td>Sobrepeso</td>
+       		</tr>
+       		<tr>
+       			<td>Entre 30 e 34.9</td><td>Obesidade Grau 1</td>
+       		</tr>
+       		<tr>
+       			<td>Entre 35 e 39.9</td><td>Obesidade Grau 2</td>
+       		</tr>
+       		<tr>
+       			<td> Mais que 40</td><td>Obesidade Grau 3</td>
+       		</tr>
+       	 
+	   </table>
+       </aside>
+       <footer>
+       	<p id= "p2">MAPA (Material de Avaliação Prática de Aprendizagem) / Curso: Sistemas Para Internet / Disciplina: Programação Front End</p>
+       	<p id= "p2">Desenvolvido por @Diego Alrais</p>
+       	</footer>
+    </body>
+</html>
